@@ -1,0 +1,15 @@
+((*- extends 'article.tplx' -*))
+
+% Disable input cells
+((* block input_group *))
+((* endblock input_group *))
+
+((* block execute_result scoped *))
+    ((*- for type in output.data | filter_data_type -*))
+        ((*- if type in ['text/plain']*))
+            ((( add_prompt(output.data['text/plain'] | escape_latex, cell, 'Out', 'outcolor') )))
+        ((* else -*))
+\texttt{\color{outcolor}Out[{\color{outcolor}((( cell.execution_count )))}]:}((( super() )))
+        ((*- endif -*))
+    ((*- endfor -*))
+((* endblock execute_result *))
