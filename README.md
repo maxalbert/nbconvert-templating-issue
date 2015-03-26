@@ -13,8 +13,8 @@ nbconvert templates.
 
   - template2.tplx:
 
-    This extends 'article.tplx' but also contains an exact copy of the 'execute_result'
-    block from the IPython repository. If my understanding is correct, this should
+    This extends `article.tplx` but also contains an exact copy of the `execute_result`
+    block from the IPython template. If my understanding is correct, this should
     simply replace the definition in the original template file
     `Python/nbconvert/templates/latex/style_ipython.tplx`, so that the output
     should not change. However, for certain cells (e.g. the music image in the
@@ -22,6 +22,6 @@ nbconvert templates.
 
   - template3.tplx:
 
-    This contains a modified copy of the 'execute_result' block with all references
+    This contains a modified copy of the `execute_result` block with all references
     to "Out" removed. Again, for some cells this works but for some cells it still
     generates an "Out[]" prompt.
