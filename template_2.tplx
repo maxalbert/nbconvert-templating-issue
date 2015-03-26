@@ -1,9 +1,7 @@
 ((*- extends 'article.tplx' -*))
 
-% Disable input cells
-((* block input_group *))
-((* endblock input_group *))
-
+% This is an exact copy of the block 'execute_result' in IPython/nbconvert/templates/latex/style_ipython.tplx
+% from the IPython repository.
 ((* block execute_result scoped *))
     ((*- for type in output.data | filter_data_type -*))
         ((*- if type in ['text/plain']*))
