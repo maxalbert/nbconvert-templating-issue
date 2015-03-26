@@ -2,8 +2,8 @@ This repo illustrates an issue with nbconvert when trying to strip the "Out[]"
 prompts from the output cells (e.g. in order to generate LaTeX reports that do
 not appear to be produced from 'live' notebooks).
 
-There are three templates for nbconvert illustrating the issue. Type 'make' to
-produce three PDF documents using each of these templates.
+Type 'make' to produce three PDF documents, each using each one of the following
+nbconvert templates.
 
   - template1.tplx:
 
