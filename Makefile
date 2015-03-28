@@ -1,6 +1,7 @@
 BASENAME ?= minimal_example
 
-all: convert-with-template-1 convert-with-template-2 convert-with-template-3
+all: convert-with-template-1 convert-with-template-2 convert-with-template-3 convert-with-template-4
+
 
 convert:
 	ipython nbconvert --to pdf $(BASENAME).ipynb --output $(BASENAME)_out
